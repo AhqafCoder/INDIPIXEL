@@ -12,6 +12,7 @@ nav {
   gap: 10px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding: 0.5rem 1rem;
   position: sticky;
   top: 0;
@@ -21,8 +22,7 @@ nav {
 
 nav img {
   height: 80px;
-  margin-right: 100px;
-  margin-left: 30px;
+  margin-right: 15px;
 }
 
 nav a {
@@ -50,33 +50,76 @@ nav a {
 .dropdown-toggle:hover {
   color: #cccccc; /* Original color */
   text-shadow: none; /* Remove text shadow */
+} 
+
+/* Dropdown Button Styling */
+.nav-item.dropdown {
+  position: relative; /* Ensure dropdown is positioned relative to its container */
+}
+
+.dropdown-menu {
+  display: none; /* Hide the dropdown by default */
+  position: absolute;
+  top: 100%; /* Position the dropdown directly below the button */
+  left: 0;
+  background-color: #333;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  min-width: 160px; /* Ensure a minimum width */
+  z-index: 100; /* Bring the dropdown in front of other elements */
+  max-width: 100%; /* Prevent overflow */
+  overflow: hidden; /* Hide anything that exceeds the container */
+}
+
+/* Dropdown Hover Styling */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block; /* Show the dropdown when hovering over the parent item */
+}
+
+/* Prevent dropdown from going out of the viewport */
+.nav-item.dropdown:hover .dropdown-menu {
+  left: auto;
+  right: 0; /* Position the dropdown to the right of the parent */
+  max-width: 90vw; /* Limit the width to 90% of the viewport */
+  white-space: nowrap; /* Prevent text from breaking into new lines */
 }
 
 /* Hero Section styling */
 .hero-section {
-  background-image: url("images/indlob.webp");
-  background-size: cover;
-  background-position: center;
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
-  justify-content: first baseline;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding-top: 12%;
-  padding-left: 8%; /* Adjust padding for positioning */
+  padding-left: 8%;
   color: white;
   text-align: left;
 }
 
-.hero-section h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/indlob.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* Make the image dull */
+  z-index: 1;
+  pointer-events: none; /* Allow interaction with elements above */
 }
 
-.hero-section p {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1.5rem;
-  margin: 1rem 0;
+.hero-section h1,
+.hero-section p,
+.play-now-btn {
+  position: relative; /* Bring text above the background */
+  z-index: 2;
+  filter: brightness(1.5); /* Make the text brighter */
 }
 
 /* Button styling */
@@ -94,6 +137,7 @@ nav a {
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease; /* Smooth transitions */
   outline: none;
   border: 2px solid transparent;
+  cursor: pointer; /* Show pointer to indicate interactivity */
 }
 
 .play-now-btn:hover {
@@ -105,6 +149,7 @@ nav a {
 .play-now-btn i {
   margin-right: 10px; /* Space between icon and text */
 }
+
 
 /* Footer styling */
 footer {
