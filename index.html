@@ -1,73 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Indipixel</title>
-  <link rel="icon" href="images/indilogo.webp" type="image/x-icon">
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="images/indilogo.webp">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome for the game controller icon -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>IndiPixel</title>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+<meta name="description" content="Welcome to Indipixel. Best Indian Minecraft Server">
+<meta name="keywords" content="PvP,Practice,Ranked Bedwars,RBW,Minecraft">
+<meta property="og:type" content="website">
+<meta property="og:title" content="IndiPixel">
+<meta property="og:description" content="Welcome to IndiPixel, the BEST Indian Minecraft Server">
+
+<!-- THEME -->
+<link rel="stylesheet" type="text/css" href="css/all.css">
+<link rel="stylesheet" type="text/css" href="css/app.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="css/scale.css">
+<script defer="" src="js/cdn.min_1.js"></script>
+<link rel="stylesheet" type="text/css" href="css/content-styles.css">
+
+<!-- THEME SETTINGS -->
+<style>
+  :root {
+  --color-indigo-50: 255 247 237;--color-indigo-100: 255 237 213;--color-indigo-200: 254 215 170;--color-indigo-300: 253 186 116;--color-indigo-400: 251 146 60;--color-indigo-500: 249 115 22;--color-indigo-600: 234 88 12;--color-indigo-700: 194 65 12;--color-indigo-800: 154 52 18;--color-indigo-900: 124 45 18;--color-voon-950: 8 8 8;
+    --color-voon-900: 10 10 10;
+    --color-voon-800: 14 14 14;
+    --color-voon-700: 18 18 18;
+    --color-voon-background: 18 18 18;
+    --color-voon-card: 14 14 14;
+    --color-neutral-900: 23 23 23;
+    --color-zinc-600: 82 82 91;  }
+</style>
+
+<!-- CUSTOM CSS -->
+<style type="text/css">
+  </style>
+
+<!-- ROLE CSS -->
+<style type="text/css">
+          
+            
+      </style>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <img src="images/indilogo.webp" alt="Indipixel Logo" height="80px">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto navbar">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://discord.gg/CFRtAaAF">Discord</a></li>
-          <li class="nav-item"><a class="nav-link" href="vote.html">Vote</a></li>
-          <li class="nav-item"><a class="nav-link" href="ranks.html">Ranks</a></li>
-          <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="rules.html">Rules</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Help
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#feature1">Discord Ban Appeal</a></li>
-              <li><a class="dropdown-item" href="#feature2">Ingame Ban Appeal</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  <!-- Hero Section with background image -->
-  <div class="hero-section">
-    <div>
-      <h1>Join the #1 Minecraft <br>Server</h1>
-      <p>IndiPixel is the BEST Indian Minecraft server</p>
-      <a href="#play" class="play-now-btn">
-        <i class="fas fa-gamepad"></i> <!-- Game controller icon -->
-        <span class="outlined-text"><b>Play Now</b></span>
+<body x-data="body">
+<div id="app">
+  	<style>
+		.shopping-cart-count { display: none; }
+	</style>
+    
+
+<header id="header" class="hidden sm:block">
+  <div class="section flex justify-between items-center py-3">
+    <div class="flex gap-20 items-center">
+      <a href="/">
+        <img class="h-[5.5rem]" src="images/indilogo.webp" alt="Indipixel Logo">
       </a>
+            <nav class="gap-6 lg:flex">
+                      <a href="/" class="nav-item mr-2">Home</a>
+                      <a href="https://discord.gg/vjx2vuFz3f" class="nav-item mr-2 ">Discord</a>
+                      <a href="vote.html" class="nav-item mr-2 ">Vote</a>     
+					  <a href="ranks.html" class="nav-item mr-2 ">Ranks</a>           
+</nav>
+</div>
+</header>
+
+<div class="sm:hidden" id="mobile-menu" x-data="{mainMenu: false}">
+  <div class="flex items-center justify-between space-y-1 px-2 pt-2 pb-3">
+    <a href="/">
+      <img class="h-[3rem]" src="images/indilogo.webp" alt="Indipixel Logo">
+    </a>
+    
+    <!-- Mobile menu button-->
+    <button @click="mainMenu = ! mainMenu" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg x-cloak="" x-show="!mainMenu" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+      <svg x-cloak="" x-show="mainMenu" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+  <div x-cloak="" x-show="mainMenu" class="space-y-1 px-2 pt-2 pb-3">
+                                
+          
+              <a href="/" class="text-white block px-3 py-2 rounded-md text-base font-medium bg-voon-950" aria-current="page">Home</a>
+          
+                                                    
+          
+              <a href="https://discord.gg/vjx2vuFz3f" class="text-white block px-3 py-2 rounded-md text-base font-medium " aria-current="page">Discord</a>
+          
+              <a href="vote.html" class="text-white block px-3 py-2 rounded-md text-base font-medium " aria-current="page">Vote</a>
+
+			  <a href="ranks.html" class="text-white block px-3 py-2 rounded-md text-base font-medium " aria-current="page">Ranks</a>
+
+            </div>
+</div>
+  <main class="main" role="main">
+    		
+			<section id="__heroSection" x-data="carousel()" x-init="init()">
+			<div class="carousel overflow-hidden" x-ref="carousel">
+				<div class="">
+					<div class="absolute top-0 left-0 bg-cover bg-center w-full h-full" style="background-image: url('images/indlob.webp')">
+					</div>
+					<div class="section pt-36 pb-60 lg:pt-48 lg:pb-96 relative px-6 z-20">
+						<h1 class="text-white text-5xl font-extrabold mt-6 max-w-2xl">
+							Join the #1 Minecraft Server						</h1>
+						<p class="text-white/75 text-xl font-semibold max-w-lg mt-2">
+							IndiPixel is the BEST Indian Minecraft server</p>
+						<div class="flex items-center gap-4 mt-10 relative z-10">
+							<a href="play.html" class="rounded-2xl py-3 px-8 font-semibold bg-gradient-to-r from-indigo-500 to-indigo-600 text-white relative flex items-center">
+								<i class="fas fa-gamepad text-playbtn mr-3"></i>
+								Play Now							</a>
+													</div>
+					</div>
+				</div>
+				
+																</div>
+		</section>
+		
+		
+	<section class="section pt-12 pb-20 gap-12 grid lg:grid-cols-10">
+		<div class="lg:col-span-7">
+			<h3 class="text-white font-bold text-2xl">Information</h3>
+										<div class="grid gap-12 mt-12">
+																	<div class="flex flex-col lg:flex-row group">
+							<div class="flex-1">
+								<a class="block rounded-3xl relative overflow-hidden">
+									<div class="bg-cover bg-center h-72 lg:h-56 xl:h-72 w-full group-hover:scale-110 transition-all duration-300 group-hover:rotate-3" style="background-image: url('images/indloblogo.webp')"></div>
+									<div class="absolute bottom-0 left-0 right-0 pb-3 pt-20 px-5 bg-gradient-to-t from-black/75 flex items-center"></div>
+								</a>
+							</div>
+							<div class="flex-1 flex flex-col p-4">
+								<div class="py-3">
+									<a class="block">
+										<h3 class="line-clamp-1 text-xl font-semibold text-gray-200">Welcome to IndiPixel!</h3>
+									</a>
+									<div class="text-indigo-50/75 mt-2 text-sm line-clamp-2">Welcome to IndiPixel, the best Indian Minecraft Server</div>
+								</div>
+								<div class="mt-auto flex justify-between items-center">
+									<div class="flex divide-x divide-white/20">
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+																	<div class="flex flex-col lg:flex-row group">
+							<div class="flex-1">
+								<a class="block rounded-3xl relative overflow-hidden">
+									<div class="bg-cover bg-center h-72 lg:h-56 xl:h-72 w-full group-hover:scale-110 transition-all duration-300 group-hover:rotate-3" style="background-image: url('images/bedsrc.webp')"></div>
+									<div class="absolute bottom-0 left-0 right-0 pb-3 pt-20 px-5 bg-gradient-to-t from-black/75 flex items-center"></div>
+								</a>
+							</div>
+							<div class="flex-1 flex flex-col p-4">
+								<div class="py-3">
+									<a class="block">
+										<h3 class="line-clamp-1 text-xl font-semibold text-gray-200">Bedwars</h3>
+									</a>
+									<div class="text-indigo-50/75 mt-2 text-sm line-clamp-2">Bedwars, the most popular Minecraft Minigame is now in IndiPixel and more game modes are in development
+                  </div>
+								</div>
+								<div class="mt-auto flex justify-between items-center">
+									<div class="flex divide-x divide-white/20">
+										</span>
+										<span class="pl-3 text-white/50 flex items-center gap-2">
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+																	<div class="flex flex-col lg:flex-row group">
+							<div class="flex-1">
+								<a class="block rounded-3xl relative overflow-hidden">
+									<div class="bg-cover bg-center h-72 lg:h-56 xl:h-72 w-full group-hover:scale-110 transition-all duration-300 group-hover:rotate-3" style="background-image: url('images/indlob.webp')"></div>
+									<div class="absolute bottom-0 left-0 right-0 pb-3 pt-20 px-5 bg-gradient-to-t from-black/75 flex items-center"></div>
+								</a>
+							</div>
+							<div class="flex-1 flex flex-col p-4">
+								<div class="py-3">
+									<a class="block">
+										<h3 class="line-clamp-1 text-xl font-semibold text-gray-200">New Lobby!</h3>
+									</a>
+									<div class="text-indigo-50/75 mt-2 text-sm line-clamp-2">We’re thrilled to introduce our brand-new Indian themed lobby, whether you are Veteran or a newbie it is easy to navigate through it</div>
+								</div>
+								<div class="mt-auto flex justify-between items-center">
+									<div class="flex divide-x divide-white/20">
+										</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+						
+						
+							<div>
+
+	</section>
+  </main>
+  <footer id="footer" class="bg-voon-700/50 border-t-2 border-zinc-600/10">
+  <div class="section  grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-0">
+    <div class="col-span-2 lg:col-span-1 flex gap-3 items-center">
+      <img class="hidden md:inline-block w-20" src="images/indilogo.webp" alt="IndiPixel Logo">
+      <div class="text-sm font-medium text-white">
+        <p>Copyright @<a href="/" target="_blank">IndiPixel</a></p>
+        <span class="text-white">All rights reserved. © 2024</span>
+      </div>
+      <div class="flex gap-2 ml-auto">
+                          <a href="https://www.youtube.com/@jugadu.gaming" class="text-indigo-300/75 transition hover:text-red-600 p-2 z-10">
+            <i class="fab fa-youtube text-lg"></i>
+          </a>
+                                  <a href="https://discord.gg/vjx2vuFz3f" class="text-indigo-300/75 transition hover:text-[#4d48e5] p-2 z-10">
+            <i class="fab fa-discord text-lg"></i>
+          </a>
+        	      	                    </div>
+    </div>
+    <div class="relative hidden md:flex justify-center">
+      <span class="absolute bottom-0 left-1/2 h-px w-px shadow-4xl shadow-indigo-400/25"></span>
+      <a href="play.html" class="transition hover:bg-indigo-700 relative lg:-top-12 mb-6 bg-indigo-600 py-3 px-6 lg:py-6 lg:px-12 lg:uppercase flex items-center gap-4 rounded-2xl lg:rounded-3xl lg:font-semibold text-white">
+        <i class="fas fa-gamepad text-playbtn"></i>
+        Play Now      </a>
+    </div>
+    <div class="flex md:gap-4 justify-between items-center lg:justify-between">
+      <div class="flex gap-3">
+                          <div x-cloak="" class="relative inline-block text-left mb-8 md:mb-0" x-data="{languageMenu: false}">
+            <div>
+	  
     </div>
   </div>
-
-  <div class="container">
-    <h2>About Indipixel</h2>
-    <p>Indipixel is a Minecraft server that brings gamers together for an amazing multiplayer experience. Join us to explore, build, and battle!</p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Indipixel. All Rights Reserved.</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</footer>
+</div>
+<script src="js/lazyload.min.js"></script>
 </body>
 </html>

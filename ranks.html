@@ -2,7 +2,7 @@
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="images/indilogo.webp">
+<link rel="shortcut icon" type="image/x-icon" href="images/indilogo.png">
 
 
 <title>IndiPixel</title>
@@ -127,8 +127,7 @@
         z-index: 1000;
         width: 200px;
         text-align: left;
-    }  
-   
+    }
 </style>
 
 <body x-data="body">
@@ -136,7 +135,7 @@
   <div class="section flex justify-between items-center py-3">
     <div class="flex gap-20 items-center">
       <a href="/">
-        <img class="h-[5.5rem]" src="images/indilogo.webp" alt="Indipixel Logo">
+        <img class="h-[5.5rem]" src="images/indilogo.png" alt="Indipixel Logo">
       </a>
             <nav class="gap-6 lg:flex">
                       <a href="/" class="nav-item mr-2">Home</a>
@@ -145,34 +144,12 @@
 					  <a href="ranks.html" class="nav-item mr-2 ">Ranks</a>          
 </nav>
 </div>
-<style>
-  .nav-item {
-  color: #cccccc; /* Default text color */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 18px;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.nav-item:hover {
-  color: #ffffff; /* Glow color */
-  text-shadow: 
-  0 0 5px rgba(255, 165, 0, 1),
-    0 0 10px rgba(255, 165, 0, 0.95), 
-    0 0 20px rgba(255, 165, 0, 0.85), 
-    0 0 40px rgba(255, 165, 0, 0.75), 
-    0 0 80px rgba(255, 165, 0, 0.65), 
-    0 0 100px rgba(255, 165, 0, 0.45); /* Create multi-layered glow */
-}
-
-</style> 
 </header>
 
 <div class="sm:hidden" id="mobile-menu" x-data="{mainMenu: false}">
   <div class="flex items-center justify-between space-y-1 px-2 pt-2 pb-3">
     <a href="/">
-      <img class="h-[3rem]" src="images/indilogo.webp" alt="Indipixel Logo">
+      <img class="h-[3rem]" src="images/indilogo.png" alt="Indipixel Logo">
     </a>
     
     <!-- Mobile menu button-->
@@ -205,7 +182,7 @@
 			<section id="__heroSection" x-data="carousel()" x-init="init()">
 			<div class="carousel overflow-hidden" x-ref="carousel">
 				<div class="">
-					<div class="absolute top-0 left-0 bg-cover bg-center w-full h-full" style="background-image: url('images/indlob.webp')">
+					<div class="absolute top-0 left-0 bg-cover bg-center w-full h-full" style="background-image: url('images/indlob.png')">
 					</div>
 					<div class="section pt-36 pb-60 lg:pt-48 lg:pb-96 relative px-6 z-20">
 						<h1 class="text-white text-5xl font-extrabold mt-6 max-w-2xl">
@@ -277,30 +254,7 @@
                       </div>
                   </div>
               </div>
-          </div> 
-          <style>
-            #__heroSection .carousel {
-    position: relative;
-}
-
-#__heroSection .carousel .absolute {
-    filter: brightness(0.4); /* Adjust the value as needed to dull the image */
-}
-            </style>
-            <style>.rank img {
-              width: 100%;
-              height: auto;
-              margin-bottom: 10px;
-              transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth animation for both zoom and shadow */
-              border-radius: 10px; /* Optional: Add rounded corners */
-          }
-          
-          .rank img:hover {
-              transform: scale(1.2) rotate(3deg); /* Zooms in and slightly rotates the image */
-              box-shadow: 0 8px 20px rgba(255, 165, 0, 0.8); /* Adds an orange glowing shadow */
-              filter: brightness(1.1); /* Slightly increases the brightness */
-          } </style>
-          
+          </div>
       
           <script>
               function togglePopup(popupId) {
@@ -317,12 +271,11 @@
   <footer id="footer" class="bg-voon-700/50 border-t-2 border-zinc-600/10">
   <div class="section  grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-0">
     <div class="col-span-2 lg:col-span-1 flex gap-3 items-center">
-      <img class="hidden md:inline-block w-20" src="images/indilogo.webp" alt="IndiPixel Logo">
+      <img class="hidden md:inline-block w-20" src="images/indilogo.png" alt="IndiPixel Logo">
       <div class="text-sm font-medium text-white">
         <p>Copyright @<a href="/" target="_blank">IndiPixel</a></p>
         <span class="text-white">All rights reserved. © 2024</span>
       </div>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
       <div class="flex gap-2 ml-auto">
                           <a href="https://www.youtube.com/@jugadu.gaming" class="text-indigo-300/75 transition hover:text-red-600 p-2 z-10">
             <i class="fab fa-youtube text-lg"></i>
@@ -347,4 +300,3 @@
 <script src="js/lazyload.min.js"></script>
 </body>
 </html>
-i need zooming effect on images of ranks by howering 
